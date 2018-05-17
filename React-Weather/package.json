@@ -1,0 +1,38 @@
+{
+  "name": "react-weather",
+  "version": "1.0.0",
+  "description": "A Sample Weather App Done in React",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azayzel/React-Weather.git"
+  },
+  "keywords": [
+    "React",
+    "Weather",
+    "Example",
+    "React",
+    "Fetch"
+  ],
+  "author": "Josh Lavely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azayzel/React-Weather/issues"
+  },
+  "homepage": "https://github.com/Azayzel/React-Weather#readme",
+  "devDependencies": {
+    "react-scripts": "1.1.4",
+    "webpack": "~4.8.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
