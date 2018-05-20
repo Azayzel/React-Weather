@@ -1,10 +1,43 @@
+html{
+ height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wide{
+  width: 100%;
+}
+.p-text{
+  color: white;
+}
+.left-footer{
+  bottom: 0;
+  text-align: center;
+  position: absolute;
+}
+
+.main{
+  height: 100% !important;
+  width: 100vw !important;
+  top: 0;
+  left: 0;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  vertical-align: middle;
+    border-style: none;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
 }
 
 .App-header {
@@ -14,12 +47,140 @@
   color: white;
 }
 
-.App-title {
+.sun-color {
   font-size: 1.5em;
+    position: relative;
+    color: #f1c40f;
 }
 
 .App-intro {
   font-size: large;
+}
+
+/* Weather Card - Main */
+.pad-cards{
+  padding: 20px;
+  vertical-align: center;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 500px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.mini-card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 200px;
+    width: 150px;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-img {
+  height: 55%;
+  padding: 5px;
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+/* Input form For City + State */
+.input-form{
+  width: 500px;
+  height: 400px;
+}
+
+.dark{
+  background-color: #34495E;
+}
+.light{
+  background-color: #F2D7D5
+}
+/* the svg element */
+.svg-sun{
+  width:300px;
+  height:300px;
+
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin:50% 50%;
+
+-webkit-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+-moz-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+-o-animation:spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+-ms-animation: spin 25s linear infinite, sun-glow 3s 0s ease-in-out infinite;
+animation: spin 25s linear infinite,sun-glow 3s 0s linear infinite;
+
+}
+/* the circle element in the svg itself */
+#sun{
+  stroke-width:18;
+  stroke-dasharray:2;
+  stroke-dashoffset:2;
+}
+/* animation for the sun glowing effect */
+@-webkit-keyframes sun-glow { 
+	0% { fill: #f1c40f; stroke:#f1c40f;}
+	50% { fill: #e67e22; stroke:#e67e22;}
+	100% { fill: #f1c40f; stroke:#f1c40f;}
+}
+@-moz-keyframes sun-glow { 
+	0% { fill: #f1c40f; stroke:#f1c40f;}
+	50% { fill: #e67e22; stroke:#e67e22;}
+	100% { fill: #f1c40f; stroke:#f1c40f;}
+}
+@-o-keyframes sun-glow { 
+	0% { fill: #f1c40f; stroke:#f1c40f;}
+	50% { fill: #e67e22; stroke:#e67e22;}
+	100% { fill: #f1c40f; stroke:#f1c40f;}
+}
+@-ms-keyframes sun-glow { 
+	0% { fill: #f1c40f; stroke:#f1c40f;}
+	50% { fill: #e67e22; stroke:#e67e22;}
+	100% { fill: #f1c40f; stroke:#f1c40f;}
+}
+@keyframes sun-glow { 
+	0% { fill: #f1c40f; stroke:#f1c40f;}
+	50% { fill: #e67e22; stroke:#e67e22;}
+	100% { fill: #f1c40f; stroke:#f1c40f;}
+}
+
+/* start spin animation */
+@-webkit-keyframes spin{
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-moz-keyframes spin{
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-o-keyframes spin{
+	100% {
+		-o-transform: rotate(360deg);
+	}
+}
+@-ms-keyframes spin{
+	100% {
+		-ms-transform: rotate(360deg);
+	}
+}
+@keyframes spin{
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes App-logo-spin {
