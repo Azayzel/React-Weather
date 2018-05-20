@@ -61,6 +61,7 @@ html{
 .pad-cards{
   padding: 20px;
   vertical-align: center;
+  margin: 0 auto;
 }
 
 .card {
@@ -76,8 +77,11 @@ html{
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    height: 200px;
+    height: auto;
     width: 150px;
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #fff
 }
 /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -105,6 +109,36 @@ html{
 .light{
   background-color: #F2D7D5
 }
+
+/* Forecast title */
+.f-title {
+  overflow: hidden;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.f-title:before,
+.f-title:after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.f-title:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.f-title:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 /* the svg element */
 .svg-sun{
   width:300px;

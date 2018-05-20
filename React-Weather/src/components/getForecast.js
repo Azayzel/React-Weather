@@ -28,44 +28,25 @@ class GetForecast extends Component {
     render() {
 
         return (
-            <div
-                id="carouselExampleControls"
-                className="carousel slide"
-                data-ride="carousel">
-                <div className="carousel-inner">
-                    {this
-                        .state
-                        .forecast
-                        .map((day, i) => {
-                            return (
-                                <div className="mini-card" key={i}>
-                                    < div className="carousel-item active">
-                                        <img className="card-img d-block w-100" src={day.icon_url} alt={day.icon}/>
-                                        <p className="title">{day.icon}</p>
-                                        <p>{day.fcttext}</p>
-                                    </div>
+            <div className="row pad-cards">
+                {this
+                    .state
+                    .forecast
+                    .map((day, i) => {
+                        return (
+                            <div className="mini-card" key={i}>
+                                <div className="carousel-item active">
+                                    <img className="card-img d-block w-100" src={day.icon_url} alt={day.icon}/>
+                                    <p className="title">{day
+                                            .icon
+                                            .replace("nt_", "")}</p>
+                                    <hr/>
+                                    <p>{day.fcttext}</p>
                                 </div>
-                            );
-                        })
+                            </div>
+                        );
+                    })
 }
-                </div>
-
-                <a
-                    className="carousel-control-prev"
-                    href="#carouselExampleControls"
-                    role="button"
-                    data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a
-                    className="carousel-control-next"
-                    href="#carouselExampleControls"
-                    role="button"
-                    data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
             </div>
         )
     }

@@ -46,8 +46,14 @@ class App extends Component {
             </div>
           </div>
           <div className="col-md-9 col-lg-9 light">
+            <h2 className="f-title">
+              Your Weather Now
+            </h2>
             <GetWeatherAuto callBackFromParent={this.myCallback}/>
             <div className="row">
+              <h2 className="f-title">
+                10-Day Forecast
+              </h2>
               {this.state.Weather !== null
                 ? <GetForecast Weather={this.state.Weather}/>
                 : null}
